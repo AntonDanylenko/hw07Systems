@@ -3,8 +3,10 @@
 #include "linked_lists.h"
 
 void print_list(struct node *start){
-  while (start->next != 0){
-    printf("%d, ", start->i);
+  printf("%d", start->i);
+  while (start->next){
     start = start->next;
+    printf(", %d", start->i);
   }
+  printf("\n");
 }
