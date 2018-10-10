@@ -20,6 +20,13 @@ struct node * insert_front(struct node *start, int num){
 }
 
 struct node * free_list(struct node *start){
+  struct node *new;
+  new = start->next;
   free(start);
+  while (new->next){
+    struct node *temp = new;
+    new = new->next;
+    free(temp); 
+  }
   return start;
 }
