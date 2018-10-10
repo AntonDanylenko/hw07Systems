@@ -10,3 +10,15 @@ void print_list(struct node *start){
   }
   printf("\n");
 }
+
+struct node * insert_front(struct node *start, int num){
+  struct node new;
+  new.i = num;
+  new.next = start;
+  return new;
+}
+
+struct node * free_list(struct node *start){
+  free(&start);
+  return start;
+}

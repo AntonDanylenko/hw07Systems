@@ -13,4 +13,9 @@ int main(){
   b.next = &c;
   c.next = 0;
   print_list(&a);
+
+  z = insert_front(a, 20);
+  print_list(z);
+
+  print_list(free_list(z));
 }
