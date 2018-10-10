@@ -6,6 +6,7 @@ int main(){
   struct node *a;
   struct node *b;
   struct node *c;
+  a = malloc(sizeof(0) + sizeof(b));
   a->i = 0;
   b->i = 1;
   c->i = 2;
