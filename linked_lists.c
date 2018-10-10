@@ -12,9 +12,10 @@ void print_list(struct node *start){
 }
 
 struct node * insert_front(struct node *start, int num){
-  struct node new;
-  new.i = num;
-  new.next = start;
+  struct node *new;
+  new = malloc(sizeof(num) + sizeof(start));
+  new->i = num;
+  new->next = start;
   return new;
 }
 
