@@ -20,6 +20,6 @@ struct node * insert_front(struct node *start, int num){
 }
 
 struct node * free_list(struct node *start){
-  free(&start);
+  free(start);
   return start;
 }
